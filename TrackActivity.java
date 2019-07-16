@@ -1,53 +1,3 @@
-package com.gisus.famsafe.ParentApp.Home;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.graphics.Color;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.gisus.famsafe.ParentApp.NavigationDrawerFragment;
-import com.gisus.famsafe.R;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.maps.DirectionsApi;
-import com.google.maps.DirectionsApiRequest;
-import com.google.maps.GeoApiContext;
-import com.google.maps.android.PolyUtil;
-import com.google.maps.model.DirectionsLeg;
-import com.google.maps.model.DirectionsResult;
-import com.google.maps.model.DirectionsRoute;
-import com.google.maps.model.DirectionsStep;
-import com.google.maps.model.EncodedPolyline;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class TrackActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     public static final String TAG = "TrackActivity";
@@ -235,21 +185,11 @@ public class TrackActivity extends AppCompatActivity implements OnMapReadyCallba
 
     private void setUpToolbar() {
 
-        //Custom Toolbar
-        mToolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.track_page_toolbar);
-        setSupportActionBar(mToolbar);
-        //mToolbar.setTitle("Home");
-        mToolbarTitle = (TextView) findViewById(R.id.home_toolbar_title);
-        mToolbarTitle.setText("P A R E N T   A P P");
-        mToolbar.setElevation(0F);
+    //code written here is working fine
     }
 
     private void setUpNavigationDrawer() {
-
-        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.track_navDrawerFragment);
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.trackdrawerLayout);
-        drawerFragment.setUpDrawer(R.id.track_navDrawerFragment, drawerLayout, mToolbar);
-
+//code written here is working fine
     }
 
 
